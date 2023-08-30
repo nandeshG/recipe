@@ -1,0 +1,11 @@
+
+    <div class="row" style="margin-top: 1rem;">
+        <div class="col-xs-12">
+            <button class="btn btn-primary" (click)="navigateToEdit()">New Recipe</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <app-recipe-item *ngFor="let recipeEl of recipes;let i = index;" [recipes]="recipeEl" [id]="i+1"></app-recipe-item>
+        </div>
+    </div>

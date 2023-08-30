@@ -1,0 +1,18 @@
+.item {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+.divH {
+  align-self: center;
+  width: 85%;
+}
+a {
+  cursor: pointer;
+}
+.matCard{
+    margin-top: .5rem;
+    background-color: aqua;
+}

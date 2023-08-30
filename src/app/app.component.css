@@ -1,0 +1,14 @@
+.nav-item{
+    cursor:pointer;
+}
+.active{
+    color: lightblue;
+    font-weight: bold;
+}
+nav{
+    background-color: aliceblue;
+}
+
+body{
+    background-color: antiquewhite;
+}

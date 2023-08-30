@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-xs-7">
+        <form [formGroup]="ingForm" >
+            <div class="row">
+                <div class="col-sm-5">
+                    <div class="form-group">
+                        <label for="name">name</label>
+                        <input type="text" class="form-control" formControlName="ingName">
+                    </div>                    
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label for="amount">amount</label>
+                        <input type="number" class="form-control" formControlName="amount">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <button class="btn btn-success buttons" type="submit" (click)="onAddIngredients(ingForm)">{{editIng? 'Update':'Add'}}</button>
+                    <button class="btn btn-danger buttons" *ngIf="editIng" (click)="OnDelete()">Delete</button>
+                    <button class="btn btn-warning buttons" type="button" (click)="resetForm()">clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

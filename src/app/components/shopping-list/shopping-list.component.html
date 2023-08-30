@@ -1,0 +1,9 @@
+<div class="row" style="background-color: aqua; margin-top: 1rem;">
+    <div class="col-xs-10">
+        <app-shopping-edit></app-shopping-edit>
+        <hr>
+        <ul class="list-group" style="margin-bottom: 1rem;">
+            <a class="list-group-item" style="margin-bottom: 0.1rem;" *ngFor="let ing of ingredients;let i = index" (click)="editIngredient(i)">{{ing.ingName}}-{{ing.amount}}</a>
+        </ul>
+    </div>
+</div>

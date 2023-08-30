@@ -1,0 +1,27 @@
+
+.example-card {
+    max-width: 600px;
+    margin-bottom: 8px;
+    width: 19rem;
+  }
+  .log{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loginTitle{
+    margin-bottom: 1rem;
+    align-self: center;
+  }
+  mat-form-field{
+    width: 17rem;
+  }
+  .sizeingAlert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  mat-card{
+    background-color: aquamarine;
+    margin-top: 1rem;
+  }

@@ -1,0 +1,35 @@
+<mat-card style="background-color: aqua;margin-top: 1rem;">
+    <mat-card-content> 
+        <div class="row">
+            <div class="col-xs-12">
+                <div>
+                    <img [src]="recipe.imgUrl" class="img-responsive" style="max-height: 200px;" alt="not able to load image">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>{{recipe.name}}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <button mat-raised-button [matMenuTriggerFor]="menu" color="primay">manage recipe <mat-icon>keyboard_arrow_down</mat-icon></button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="addIngToShoppingList()">To Shopping List</button>
+                    <button mat-menu-item (click)="NavigateToEdit()">Edit Recipe</button>
+                    <button mat-menu-item (click)="onDeleteRecipe()">Delete Recipe</button>
+                </mat-menu>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 1rem;">
+            <div class="col-xs-12">
+                <ul class="list-group"  *ngFor="let ingredient of recipe.ingredients">
+                    <li class="list-group-item">{{ingredient.ingName}}-{{ingredient.amount}}</li>
+                </ul>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+  
+

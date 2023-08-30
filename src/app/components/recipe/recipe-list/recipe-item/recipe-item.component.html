@@ -1,0 +1,16 @@
+<mat-card class="matCard">
+    <mat-card-content>
+        <a class="list-group-item clearfix" (click)="navigateToEdit()">
+            <div class="item">
+                <div class="divH">
+                    <h4 class="list-group-item-heading">{{recipes.name}}</h4>
+                   <p class="list-group-item-text">{{recipes.description}}</p>          
+                </div>
+                    <span  style="align-self: center;"><img  class="img-responsive" style="max-height: 50px;"
+                        [src]="recipes.imgUrl" alt=""></span>      
+                
+            </div>
+        </a>
+    </mat-card-content>
+</mat-card>
+   

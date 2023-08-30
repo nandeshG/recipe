@@ -1,0 +1,32 @@
+<div class="container">  
+    <div class="sizeingAlert">
+        <div class="alert alert-danger" role="alert" style="width:20rem" *ngIf="error">{{error}}</div>
+    </div>         
+       <div class="log">        
+        <mat-card class="example-card">
+            <mat-card-header class="loginTitle">
+                <mat-card-title>{{isLogin? 'Log In' : 'Sign Up'}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>               
+                    <form [formGroup]="form">
+                       <div>            
+                            <mat-form-field>
+                               <mat-label>Email</mat-label>
+                                <input  matInput type="email" name="email" id="" formControlName="email">
+                            </mat-form-field>
+                       </div>
+                       <div>
+                           <mat-form-field>
+                               <mat-label>Password</mat-label>
+                               <input  matInput type="password" name="password" id="" formControlName="password">
+                           </mat-form-field>
+                       </div>
+                       <div>
+                           <button mat-raised-button color="primary" type="submit" (click)="signUp(form)">{{isLogin ? 'Login' : 'Sign Up'}}</button>|
+                           <button mat-raised-button color="primary" type="button" (click)="switchMode()">switch {{isLogin ? 'Sign Up' : 'Login'}}</button>
+                       </div>
+                   </form>
+            </mat-card-content>
+          </mat-card>
+       </div>
+</div>
